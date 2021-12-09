@@ -1,8 +1,18 @@
 const express = require('express');
-
+const path = require('path');
 const app = express();
 
 app.use(express.json());
+
+app.set('view engine', 'hbs');
+
+// on indique que nos vues se trouverons toujours dans le dossier views
+app.set('views', path.join(__dirname, 'views'));
+
+
+app.get('/', (req, res) => {
+    res.render('index', { name: 'Jeux olympiques' });
+});
 
 // Ajouter les routes via les routers
 const apiUrl = '/api'
