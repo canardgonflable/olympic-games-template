@@ -13,6 +13,20 @@ class SportController {
         });
     }
 
+    /**
+     * Créer un sport
+     */
+    async create(req, res) {
+        const body = req.body;
+
+        const sport = await Sport.create(req.body)
+        console.log(body);
+        console.log(sport)
+
+        res.send('toto')
+
+    }
+
     // ... A COMPLETER ...
 }
 

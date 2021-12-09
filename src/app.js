@@ -5,8 +5,14 @@ const app = express();
 app.use(express.json());
 
 // Ajouter les routes via les routers
+const apiUrl = '/api'
+
 const sportRouter = require('./routers/sport.router');
-app.use('/api', sportRouter);
+const athleteRouter = require('./routers/athlete.router');
+
+app.use(apiUrl, sportRouter);
+app.use(apiUrl, athleteRouter);
+
 // ... A COMPLETER ...
 
 // Connexion à la base de données

@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
+const dbUrl = 'mongodb+srv://ipilyon:ipilyon12345@ipinodejsmagnin.orrut.mongodb.net/jeux_olympiques'
 
-mongoose.connect('mongodb+srv://ipilyon:ipilyon12345@ipinodejsmagnin.orrut.mongodb.net/jeux_olympiques', {useNewUrlParser: true, useUnifiedTopology: true});
+//mongoose.connect(process.env.MONGODB_URL, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(dbUrl, {useNewUrlParser: true, useUnifiedTopology: true});
 
 const db = mongoose.connection;
 
