@@ -8,5 +8,4 @@ cd olympic-games-template
 npm install
 add url to MONGODB_URL in .env file
 npm start
-
 ```
