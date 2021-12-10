@@ -8,10 +8,6 @@ const athleteSchema = new mongoose.Schema({
     lastName: String,
     gender: String,
     country: String
-
-    // ... A COMPLETER ...
-    // Exemple :
-    // athletes : [{ type: Schema.Types.ObjectId, ref: 'Athlete' }]
 });
 
 const Athlete = mongoose.model('Athlete', athleteSchema);

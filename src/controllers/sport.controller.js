@@ -20,7 +20,6 @@ class SportController {
      */
     async new(req, res) {
         await Sport.create(req.body)
-        res.send('Ajout réussi !')
         res.redirect('/api/sports')
     }
 

@@ -15,7 +15,6 @@ router.get('/sports/:sportId/athletes', async (req, res) => {
 
 router.get('/sports/new', async (req, res) => {
     await sportController.newRender(req, res)
-    res.render('sports/new')
 });
 
 router.post('/sports/', async (req, res) => {

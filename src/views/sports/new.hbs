@@ -10,13 +10,14 @@
             <label for="category">Catégorie</label>
             <input name="category" type="text" class="form-control" id="category">
         </div>
-
-        <label for="athletes">Genre</label>
-        <select id="athletes" name="athletes" class="custom-select">
-            {{#each athletes}}
-                <option value="{{_id}}">{{firstName}} {{lastName}}</option>
-            {{/each}}
-        </select>
+        <div>
+            <label for="athletes">Athlètes</label>
+            <select id="athletes" name="athletes" class="select" multiple>
+                {{#each athletes}}
+                    <option value="{{_id}}">{{firstName}} {{lastName}}</option>
+                {{/each}}
+            </select>
+        </div>
         <br>
         <button type="submit" class="btn btn-primary">Envoyer</button>
         <a href="/api/sports" class="btn btn-cancel">Annuler</a>

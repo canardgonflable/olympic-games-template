@@ -14,8 +14,8 @@ class AthleteController {
      * Créer un athlète
      */
     async new(req, res) {
-        await Athlete.create(req.body)
-        res.redirect('/api/athletes')
+        await Athlete.create(req.body).then(res.redirect('/api/athletes'))
+
     }
 
     async listSports(req, res) {
