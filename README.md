@@ -1,4 +1,4 @@
-# Modèle de structure pour le projet Node.js/Express/MongoDB du TP1
+# Rendu du TP1 par Clément MAGNIN et Mohamed MEDACI
 
 ## Installation rapide
 
