@@ -1,9 +1,13 @@
 const Athlete = require('../models/athlete.model');
 const Sport = require("../models/sport.model");
+const Countries = require("../data/country.json")
 
 class AthleteController {
+
     /**
-     * Lister tous les athlètes
+     * @param req
+     * @param res
+     * @returns {Promise<void>}
      */
     async list(req, res) {
         const athletes = await Athlete.find();
@@ -11,13 +15,29 @@ class AthleteController {
     }
 
     /**
-     * Créer un athlète
+     * @param req
+     * @param res
+     * @returns {Promise<void>}
      */
     async new(req, res) {
-        await Athlete.create(req.body).then(res.redirect('/api/athletes'))
-
+        await Athlete.create(req.body)
+        res.redirect('/api/athletes')
     }
 
+    /**
+     * @param req
+     * @param res
+     * @returns {Promise<void>}
+     */
+    async newRender(req, res) {
+        res.render('athletes/new', {'countries': Countries})
+    }
+
+    /**
+     * @param req
+     * @param res
+     * @returns {Promise<void>}
+     */
     async listSports(req, res) {
         const athleteId = req.params.athleteId;
 

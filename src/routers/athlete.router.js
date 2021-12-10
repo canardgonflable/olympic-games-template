@@ -11,7 +11,7 @@ router.get('/athletes/', async (req, res) => {
 
 // Route vers formulaire de création
 router.get('/athletes/new', async (req, res) => {
-    res.render('athletes/new')
+    await athleteController.newRender(req, res)
 });
 
 // Méthode POST pour enregistrer les données avec le formulaire
