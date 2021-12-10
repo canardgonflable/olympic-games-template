@@ -5,7 +5,7 @@
 ### Points de terminaison Sports
 
 - [ ] Endpoint Créer un sport : `POST /api/sports`
-- [ ] Endpoint Lister les sports : `GET /api/sports`
+- [x] Endpoint Lister les sports : `GET /api/sports` (déjà fourni dans le squelette du projet)
 - [ ] Endpoint Consulter les athlètes d'un sport : `GET /api/sports/{sportId}/athletes`
 - [ ] Endpoint Ajouter un athlète dans un sport : `POST /api/sports/{sportId}/athletes/{athleteId}`
 
@@ -18,9 +18,9 @@
 ### Points de terminaison Utilisateurs administrateurs (optionnel)
 
 - [ ] Endpoint Créer un utilisateur : `POST /api/users`
-- [ ] Endpoint Mettre à jour un utilisateur : `PUT /api/users/{userId}` (sauf le mot de passe, non modifiable)
-- [ ] Endpoint Lister les utilisateurs : `GET /api/users` (sans le mot de passe, non visible)
-- [ ] Endpoint Consulter un utilisateur : `GET /api/users/{userId}` (sans le mot de passe, non visible)
+- [ ] Endpoint Mettre à jour un utilisateur : `PUT /api/users/{userId}`
+- [ ] Endpoint Lister les utilisateurs : `GET /api/users`
+- [ ] Endpoint Consulter un utilisateur : `GET /api/users/{userId}`
 
 ## Interface Web
 
@@ -54,5 +54,5 @@
 
 - [ ] Code source sur un repo Git (sans le dossier node_modules 🙏)
 - [ ] `README.md`
-  - [ ] Instruction pour installer le projet (`git clone`, `npm install`, `npm start`, exemples ...)
-  - [ ] Checklist des API et des fonctionnalités Web avec un statut des tests (OK ou KO)
+  - [ ] Instructions pour installer le projet (`git clone`, `npm install`, `npm start`, éventuels exemples de commande `curl`, ...)
+  - [ ] Checklist des API et des fonctionnalités Web avec un statut des tests (OK ✅ ou KO ❌)
