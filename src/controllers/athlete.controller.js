@@ -1,31 +1,30 @@
 const Athlete = require('../models/athlete.model');
+const Sport = require("../models/sport.model");
 
 class AthleteController {
     /**
-     * Lister tous les athletes
+     * Lister tous les athlètes
      */
     async list(req, res) {
         const athletes = await Athlete.find();
-
-        res.json({
-            count: athletes.length,
-            athletes: athletes
-        });
+        res.render('athletes/list', {'athletes': athletes})
     }
 
     /**
      * Créer un athlète
      */
-    async create(req, res) {
-        const body = req.body;
-        const athlete = await Athlete.create(req.body)
-        console.log(body);
-        console.log(athlete)
-
-        res.send('Athlète créé !')
+    async new(req, res) {
+        await Athlete.create(req.body)
+        res.redirect('/api/athletes')
     }
 
-    // ... A COMPLETER ...
+    async listSports(req, res) {
+        const athleteId = req.params.athleteId;
+
+        const sports = await Sport.find({'athletes': {$in: athleteId} });
+
+        res.render('sports/list', {'sports': sports})
+    }
 }
 
 module.exports = AthleteController;

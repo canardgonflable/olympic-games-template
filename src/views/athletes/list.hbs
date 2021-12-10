@@ -1,0 +1,18 @@
+<div>Liste des athlètes</div>
+
+<a href="/api/athletes/new" class="btn btn-primary">Nouveau</a>
+<a href="/" class="btn btn-cancel">Annuler</a>
+
+<div style="display: flex">
+    {{#each athletes}}
+        <div class="card" style="width: 18rem;">
+            <img src="https://www.mairieguerledan.bzh/wp-content/uploads/2020/01/sport-dessin.jpg" class="card-img-top" alt="{{firstName}}">
+            <div class="card-body">
+                <h5 class="card-title">{{firstName}} {{lastName}}</h5>
+                <p class="card-text">{{gender}}</p>
+                <p class="card-text">{{country}}</p>
+                <a href="/api/athletes/{{_id}}/sports" class="btn btn-primary">Afficher les sports de cet athlete</a>
+            </div>
+        </div>
+    {{/each}}
+</div>

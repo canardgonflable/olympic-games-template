@@ -1,5 +1,7 @@
 <div>Liste des sports</div>
 
+<a href="/api/sports/new" class="btn btn-primary">Nouveau</a>
+<a href="/" class="btn btn-cancel">Annuler</a>
 <div style="display: flex">
     {{#each sports}}
         <div class="card" style="width: 18rem;">
@@ -7,7 +9,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{name}}</h5>
                 <p class="card-text">{{category}}</p>
-                <a href="#" class="btn btn-primary">TODO Supprimer/Editer</a>
+                <a href="/api/sports/{{_id}}/athletes" class="btn btn-primary">Athletes</a>
             </div>
         </div>
     {{/each}}

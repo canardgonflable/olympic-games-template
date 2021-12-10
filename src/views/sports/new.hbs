@@ -1,0 +1,24 @@
+<h2>Nouveau sport</h2>
+
+<div class="container-fluid">
+    <form method="post" action="/api/sports">
+        <div class="form-group">
+            <label for="name">Nom</label>
+            <input name="name" type="text" class="form-control" id="name">
+        </div>
+        <div class="form-group">
+            <label for="category">Catégorie</label>
+            <input name="category" type="text" class="form-control" id="category">
+        </div>
+
+        <label for="athletes">Genre</label>
+        <select id="athletes" name="athletes" class="custom-select">
+            {{#each athletes}}
+                <option value="{{_id}}">{{firstName}} {{lastName}}</option>
+            {{/each}}
+        </select>
+        <br>
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+        <a href="/api/sports" class="btn btn-cancel">Annuler</a>
+    </form>
+</div>
