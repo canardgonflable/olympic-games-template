@@ -33,6 +33,7 @@ require('./database/mongodb');
 
 app.use('/public', express.static('public'));
 
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Serveur lancé sur le port ${port} 🚀`);
