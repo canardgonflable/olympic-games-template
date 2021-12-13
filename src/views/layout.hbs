@@ -8,6 +8,10 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
+<!--add-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
+  <link rel="stylesheet" href="../../public/doc/css/cards-gallery.css">
+<!--add-->
     <link
       rel="stylesheet"
       href = "../../public/doc/css/bootstrap-example.min.css"
@@ -72,6 +76,12 @@
 
   <body>
     {{{body}}}
+    <!--script animation gallerie-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.cards-gallery', { animation: 'slideIn'});
+    </script>
+    <!-- fin script-->
   </body>
 
 </html>
