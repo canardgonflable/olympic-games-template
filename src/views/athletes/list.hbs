@@ -1,0 +1,45 @@
+<!-- ======= Blog Header ======= -->
+<div class="header-bg page-area">
+    <div class="container position-relative">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="slider-content text-center">
+                    <div class="header-bottom">
+                        <div class="layer2">
+                            <h1 class="title2">Liste des athlètes</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Blog Header -->
+<div class="container">
+    <section class="gallery-block cards-gallery">
+        <div class="alert alert-light" role="alert">
+            <a href="/api/athletes/new" class="btn btn-primary btn-lg btn-block">Nouveau</a>
+            <a href="/" class="btn btn-warning btn-lg btn-block">Annuler</a>
+        </div>
+        <div class="row">
+            {{#each athletes}}
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 transform-on-hover">
+                    <a class="lightbox"
+                        href="https://www.mairieguerledan.bzh/wp-content/uploads/2020/01/sport-dessin.jpg">
+                        <img src="https://www.mairieguerledan.bzh/wp-content/uploads/2020/01/sport-dessin.jpg"
+                            alt="{{firstName}} {{lastName}}" class="card-img-top">
+                    </a>
+                    <div class="card-body">
+                        <h6>{{firstName}} {{lastName}}</h6>
+                        <h6><a href="#" style="pointer-events: none;">{{category}}</a></h6>
+                        <p class="card-text">{{gender}}</p>
+                        <p class="card-text">{{country}}</p>
+                        <a href="/api/athletes/{{_id}}/sports" class="btn btn-info">Sports pratiqués</a>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </section>
+</div>

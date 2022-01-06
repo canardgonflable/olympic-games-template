@@ -1,0 +1,95 @@
+<div class="header-bg page-area">
+    <div class="container position-relative">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="slider-content text-center">
+                    <div class="header-bottom">
+                        <div class="layer2">
+                            <h1 class="title2">Nouvel athlète</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Blog Header -->
+<div class="container-fluid">
+    <form method="post" action="/api/athletes">
+        <div class="form-group">
+            <label for="firstName">Prénom</label>
+            <input name="firstName" type="text" class="form-control" id="firstName">
+        </div>
+        <div class="form-group">
+            <label for="lastName">Nom</label>
+            <input name="lastName" type="text" class="form-control" id="lastName">
+        </div>
+        <div class="form-group">
+            <label for="gender">Genre</label>
+            <select id="gender" name="gender" class="custom-select">
+                <option selected value="None">Non défini</option>
+                <option value="M">M</option>
+                <option value="F">F</option>
+            </select>
+        </div>
+        <div class="example">
+            <label for="example-legacyFiltering">Nationalité</label>
+            <span class="multiselect-native-select">
+                <select id="example-legacyFiltering" tabindex="-1" name="athletes">
+                    {{#each countries}}
+                    <option value="{{@key}}">{{this}}</option>
+                    {{/each}}
+                </select>
+                <div class="btn-group">
+                    <div class="multiselect-container dropdown-menu">
+                        <div class="multiselect-filter">
+                            <div class="input-group input-group-sm p-1">
+                                <div class="input-group-prepend">
+                                    <i class="input-group-text fas fa-search"></i>
+                                </div>
+                                <input class="form-control multiselect-search" type="text" placeholder="Search">
+                                <div class="input-group-append">
+                                    <button class="multiselect-clear-filter input-group-text" type="button">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="multiselect-option dropdown-item" title="Option 1">
+                            <span class="form-check">
+                                <input class="form-check-input" type="checkbox" value="1">
+                                <label class="form-check-label">Option 1</label>
+                            </span>
+                        </button>
+                        <button type="button" class="multiselect-option dropdown-item active" title="Option 2">
+                            <span class="form-check">
+                                <input class="form-check-input" type="checkbox" value="2">
+                                <label class="form-check-label">Option 2</label>
+                            </span>
+                        </button>
+                        <button type="button" class="multiselect-option dropdown-item active" title="Option 3">
+                            <span class="form-check">
+                                <input class="form-check-input" type="checkbox" value="3">
+                                <label class="form-check-label">Option 3</label>
+                            </span>
+                        </button>
+                        <button type="button" class="multiselect-option dropdown-item" title="Option 4">
+                            <span class="form-check">
+                                <input class="form-check-input" type="checkbox" value="4">
+                                <label class="form-check-label">Option 4</label>
+                            </span>
+                        </button>
+                        <button type="button" class="multiselect-option dropdown-item active" title="Option 5">
+                            <span class="form-check">
+                                <input class="form-check-input" type="checkbox" value="5">
+                                <label class="form-check-label">Option 5</label>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </span>
+        </div>
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+        <a href="/api/athletes/" data-id="{{_id}}" class="btn btn-warning">Annuler</a>
+    </form>
+</div>

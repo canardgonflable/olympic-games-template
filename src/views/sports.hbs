@@ -1,0 +1,17 @@
+
+<div class="header-bg page-area">
+<div>Liste des sports</div>
+
+<div style="display: flex">
+    {{#each sports}}
+        <div class="card" style="width: 18rem;">
+            <img src="https://www.mairieguerledan.bzh/wp-content/uploads/2020/01/sport-dessin.jpg" class="card-img-top" alt="{{name}}">
+            <div class="card-body">
+                <h5 class="card-title">{{name}}</h5>
+                <p class="card-text">{{category}}</p>
+                <a href="#" class="btn btn-primary">TODO Supprimer/Editer</a>
+            </div>
+        </div>
+    {{/each}}
+</div>
+</div>
