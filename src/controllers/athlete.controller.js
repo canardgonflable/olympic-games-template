@@ -1,7 +1,7 @@
 const Athlete = require('../models/athlete.model');
 const Sport = require("../models/sport.model");
 const Countries = require("../data/country.json")
-
+let redirect = '';
 class AthleteController {
 
     /**
@@ -42,8 +42,8 @@ class AthleteController {
         const athleteId = req.params.athleteId;
 
         const sports = await Sport.find({'athletes': {$in: athleteId} });
-
-        res.render('sports/list', {'sports': sports})
+        redirect = '../';
+        res.render('sports/list', {'sports': sports, 'redirect': redirect })
     }
 }
 
