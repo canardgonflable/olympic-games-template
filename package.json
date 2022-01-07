@@ -22,7 +22,7 @@
     "express": "^4.17.1",
     "hbs": "^4.2.0",
     "mongoose": "^6.1.0",
-    "nodemon": "^2.0.15",
+    "nodemon": "^2.0.15"
   },
   "engines": {
     "node": ">=12"

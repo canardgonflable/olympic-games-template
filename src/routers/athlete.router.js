@@ -24,8 +24,4 @@ router.get('/athletes/:athleteId/sports', async (req, res) => {
     await athleteController.listSports(req, res);
 });
 
-
-
-// ... A COMPLETER ...
-
 module.exports = router;

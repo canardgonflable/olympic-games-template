@@ -9,7 +9,6 @@ npm install
 add url to MONGODB_URL in .env file
 npm start
 ```
-# TP 1 - Clement - Mohamed
 
 ## API REST
 
@@ -63,7 +62,7 @@ npm start
 
 ## Rendu attendu
 
-- [ ] Code source sur un repo Git (sans le dossier node_modules 🙏)
-- [ ] `README.md`
-  - [ ] Instructions pour installer le projet (`git clone`, `npm install`, `npm start`, éventuels exemples de commande `curl`, ...)
-  - [ ] Checklist des API et des fonctionnalités Web avec un statut des tests (OK ✅ ou KO ❌)
+- [X] Code source sur un repo Git (sans le dossier node_modules 🙏)
+- [X] `README.md`
+  - [X] Instructions pour installer le projet (`git clone`, `npm install`, `npm start`, éventuels exemples de commande `curl`, ...)
+  - [X] Checklist des API et des fonctionnalités Web avec un statut des tests (OK ✅ ou KO ❌)
